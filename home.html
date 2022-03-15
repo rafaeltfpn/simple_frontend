@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste - Estágio em Desenvolvimento</title>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+	<script type="text/javascript">
+	  	function validateForm() {
+	    var a = document.forms["Form"]["name"].value;
+	    var b = document.forms["Form"]["email"].value;
+	    var c = document.forms["Form"]["telefone"].value;
+	    var d = document.forms["Form"]["service"].value;
+	    var e = document.forms["Form"]["message"].value;
+	    if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "", e == null || e == "") {
+	      alert("Por favor preencha todos os campos da página");
+	      return false;
+	    }
+	    else{
+	    	alert("Dados enviados com sucesso");
+	    }
+	  }
+</script>
+
+
+	<div class="form">
+		<div>
+			<h1>Peça seu orçamento agora mesmo!</h1>
+		</div>
+		<div>
+			<form method="post" name="Form" onsubmit="return validateForm()" action="">
+				<div class="left floating-label-group">
+					<input type="text" class="form-control" autocomplete="off" autofocus required name="name">
+					<label class="floating-label">Nome</label>
+				</div>
+
+				<div class="left floating-label-group">
+					<input type="email" class="form-control" autocomplete="off" autofocus required name="email">
+					<label class="floating-label">E-mail</label>
+				</div>
+
+				<div class="clear">&nbsp;</div>
+
+				<div class="left floating-label-group">
+					<input type="text" class="form-control" autocomplete="off" autofocus required name="telefone">
+					<label class="floating-label">Telefone</label>
+				</div>
+
+				<div class="left">
+					<select required name="service">
+						<option value="" disabled selected>Escolha o serviço que deseja</option>
+						<option>Corte de Cabelo</option>
+						<option>Formatação de Notebook</option>
+						<option>Limpeza de Vidros</option>
+						<option>Outro</option>
+					</select>
+				</div>
+
+				<div class="clear">&nbsp;</div>
+
+				<div class="left floating-label-group">
+					<textarea type="text" class="form-control message" autocomplete="off" autofocus required name="message"></textarea>
+					<label class="floating-label">Mensagem</label>
+				</div>
+
+				<div class="button">
+					<input type="submit" name="enter">
+				</div>
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>

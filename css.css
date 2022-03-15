@@ -1,0 +1,90 @@
+input[type=text], input[type=email], input[type=tel], select, textarea{
+  width: 350px;
+  margin-left: 2em;
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #5da9db;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 0px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=text]:focus, input[type=email], input[type=tel], select, textarea{
+  border: 1px solid #5da9db;
+}
+
+.message{
+  width: 726px;
+  height: 100px;
+  
+}
+
+input[type=submit] {
+  width: 150px;
+  margin-top: 1em;
+  background-color: #0074bf;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 605px;
+}
+
+input[type=submit]:hover {
+  background-color: #5da9db;
+}
+
+h1{
+  color: gray;
+  text-align: center;
+}
+
+body{
+  background-color: #9ddeff;
+}
+
+select:invalid {
+  color: gray;
+}
+
+.form{
+  margin: 50px auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 800px;
+}
+
+.left{
+  float:left;
+}
+
+.clear{
+  clear:both;
+}
+
+.floating-label-group {
+  position: relative;
+
+}
+
+.floating-label {
+    font-size: 16px;
+    color: #cccccc;
+    position: absolute;
+    pointer-events: none;
+    top: 21px;
+    left: 40px;
+    transition: all 0.1s ease;
+  }
+
+  input:focus ~ .floating-label, input:not(:focus):valid ~ .floating-label, textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label{
+    top:9px;
+    bottom: 0px;
+    left: 40px;
+    font-size: 12px;
+    opacity: 0.5;
+    color: #grey;
+  }
